@@ -2,7 +2,7 @@ import pandas as pd
 import argparse
 # task 2.1
 ## Ignore Outlier
-def task2p1(args):
+def main(args):
     min_value = 5
     max_value =550.5
     outlier_data = [['id','time','values']]
@@ -29,4 +29,4 @@ if __name__ == '__main__':
     parser.add_argument('--path', '-p', type=str, nargs='+', default= "dust_sensor.csv",
                         help='path to csv file')
     args = parser.parse_args()
-    task2p1(args)
+    main(args)
