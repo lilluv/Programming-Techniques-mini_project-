@@ -36,7 +36,7 @@ def main():
             value = round(random.random(),1)
             output.append([id, log_time, value])
     output = pd.DataFrame(output)
-    pd.DataFrame.to_csv(output, "dust_sensor.csv")
+    pd.DataFrame.to_csv(output, "dust_sensor.csv", header= False, index= False )
 
 if __name__=='__main__':
     main()
