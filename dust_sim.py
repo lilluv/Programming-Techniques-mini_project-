@@ -33,7 +33,7 @@ def main():
         run_time+=opt.sampling
         log_time = datetime.datetime.combine(timestamp , convert_sec2time(run_time))
         for id in range(1,opt.num_sensors+1):
-            value = round(random.random(),1)
+            value = round(random.random()*1000,1)
             output.append([id, log_time, value])
     output = pd.DataFrame(output)
     pd.DataFrame.to_csv(output, "dust_sensor.csv", header= False, index= False )
